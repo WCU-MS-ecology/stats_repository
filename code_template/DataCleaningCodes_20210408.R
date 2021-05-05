@@ -24,6 +24,9 @@ input3c <- input[, -c(1:3, 6, 7:8)] #bracket subset by col number
 Location151_0 <- subset(input, LocationName == "151_0")
 Location151_0b <- input[input$LocationName == "151_0",]
 
+#subset multiple columns
+Daily.problem <- Daily[Daily$LocationName %in% c("13_0", "80_0", "151_0", "57_0", "101_6", "77_0", "77_13"),]
+
 #get rid of duplicated rows
 #input has a duplicated row, use the unique() function to create a new dataframe the duplicated rows
 NROW(input) #13 NROW function tells you number of rows
